@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffd83b;
+}
+
+.wrap {
+    width: 80%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 15px 35px 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: #747c7f;
+    text-align: center;
+    border: 5px dashed #636162;
+    border-bottom: none;
+    border-radius: 80px 80px 0 0;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    width: 60%;
+    margin: 0 auto 15px;
+    padding: 10px;
+    color: #27221e;
+    background-color: #e2e1e1;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.911);
+}
+
+h1 i {
+    margin-right: 30px;
+    font-size: 38px;
+    background: -webkit-linear-gradient(#ca0808, #7d0c1b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.game {
+    display: flex;
+    margin-bottom: 3vh;
+    padding: 10px;
+    border-width: 10px;
+    border-style: groove;
+    background: linear-gradient(to bottom, #636162, #e2e1e1);
+}
+
+.game div {
+    height: 30vh;
+    flex-grow: 1;
+    margin: 10px;
+    border: 2px solid #747c7f;
+    background-size: cover;
+    background-position: center;
+}
+
+.play {
+    text-align: center;
+}
+
+.play input {
+    width: 200px;
+    height: 80px;
+    margin-right: 20px;
+    padding: 20px;
+    border: 5px solid #ca0808;
+    border-style: inset;
+    background-color: rgba(255, 255, 255, 0.911);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #7d0c1b;
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.play button {
+    position: relative;
+    width: 40%;
+    height: 80px;
+    text-align: center;
+    padding: 0px 60px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #27221e;
+    border: none;
+    color: #d5a618;
+    cursor: pointer;
+    letter-spacing: 6px;
+    outline: none;
+}
+
+.play button:hover {
+    color: #ffd83b;
+}
+
+/* button border decoration */
+
+.play button::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, #d5a618 50%, transparent 50%), linear-gradient(90deg, #d5a618 50%, transparent 50%), linear-gradient(0deg, #d5a618 50%, transparent 50%), linear-gradient(0deg, #d5a618 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 3px, 15px 3px, 3px 15px, 3px 15px;
+    background-position: 0px 0px, 100% 100%, 0px 100%, 100% 0px;
+    animation: border-twist 10s infinite linear;
+}
+
+.play button:hover::before {
+    animation-duration: 3s;
+}
+
+@keyframes border-twist {
+    0% {
+        background-position: 0px 0px, 100% 100%, 0px calc(100% + 50px), 100% -50px;
+    }
+
+    100% {
+        background-position: 100% 0px, 0px 100%, 0px -50px, 100% calc(100% + 50px);
+    }
+}
+
+.results {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.911);
+    margin-top: 35px;
+    border-width: 5px;
+    border-style: inset;
+    border-color: #e2e1e1;
+}
+
+.cube {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    transform: rotate(-25deg);
+}
+
+.cube i {
+    font-size: 62px;
+    background: -webkit-linear-gradient(#ca0808, #7d0c1b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.panel {
+    margin: 0 0 30px;
+    padding-top: 30px;
+    text-transform: uppercase;
+    color: #27221e;
+}
+
+.panel,
+.score {
+    font-size: 22px;
+}
+
+.panel span,
+.score span {
+    font-weight: 700;
+    color: #7d0c1b;
+}
+
+.score {
+    padding-bottom: 30px;
+}

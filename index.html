@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slot machine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <h1><i class="fas fa-gavel"></i>Slot machine</h1>
+
+    <section class="game">
+      <div class="fruit"></div>
+      <div class="fruit"></div>
+      <div class="fruit"></div>
+    </section>
+
+    <section class="play">
+      <input type="number" placeholder="Your bid" id="bid">
+      <button id="start">Play!</button>
+    </section>
+
+    <div class="results">
+      <div class="cube"><i class="fas fa-dice"></i></div>
+      <section class="panel">current state of your wallet: <span class="wallet"></span></section>
+      <section class="score">
+        <span class="result"></span> Number of games: <span class="number"></span>, wins: <span class="win"></span> and
+        <span class="loss"></span> losses
+      </section>
+    </div>
+  </div>
+  <script src="Wallet.js"></script>
+  <script src="Statistics.js"></script>
+  <script src="Draw.js"></script>
+  <script src="Result.js"></script>
+  <script src="Game.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
